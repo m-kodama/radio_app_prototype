@@ -19,8 +19,13 @@ class MiniPlayer extends StatelessWidget {
           width: double.infinity,
           height: 108,
           child: Card(
+            shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(16)),
+            ),
             clipBehavior: Clip.antiAlias,
-            color: Theme.of(context).cardColor.withOpacity(0.1),
+            color: Theme.of(context).brightness == Brightness.light
+                ? Colors.white38
+                : Colors.black45,
             margin: const EdgeInsets.all(0),
             elevation: 0,
             child: InkWell(
